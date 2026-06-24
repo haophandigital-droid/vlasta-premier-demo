@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vlasta Premier Phú Thuận - Nghệ Thuật Sống Thượng Lưu</title>
+<meta name="description" content="Vlasta Premier Phú Thuận - Không gian sống cao cấp bên sông Sài Gòn, phát triển bởi Văn Phú Invest.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['"Be Vietnam Pro"', 'sans-serif'],
+        serif: ['Playfair Display', 'serif'],
+      },
+      colors: {
+        brand: {
+          navy: '#1a2b4c', navydark: '#0f1f38',
+          gold: '#c5a059', goldlight: '#e8d3a1',
+          cream: '#fefcf8', brown: '#3e2723',
+        }
+      },
+      animation: {
+        'float': 'float 6s ease-in-out infinite',
+        'float-delayed': 'float 8s ease-in-out 2s infinite',
+        'float-slow': 'float 12s ease-in-out infinite',
+        'pulse-glow': 'pulseGlow 4s cubic-bezier(0.4,0,0.6,1) infinite',
+        'sparkle': 'sparkle 3s ease-in-out infinite',
+      },
+      keyframes: {
+        float: {
+          '0%,100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-18px)' },
+        },
+        pulseGlow: {
+          '0%,100%': { opacity: 0.6, transform: 'scale(1)' },
+          '50%': { opacity: 0.9, transform: 'scale(1.05)' },
+        },
+        sparkle: {
+          '0%,100%': { opacity: 0, transform: 'scale(0) translateY(0)' },
+          '50%': { opacity: 1, transform: 'scale(1) translateY(-20px)' },
+        }
+      }
+    }
+  }
+}
+</script>
+<style>
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:#fefcf8}
+::-webkit-scrollbar-thumb{background:#c5a059;border-radius:10px}
+
+html{scroll-padding-top:80px}
+
+.reveal{opacity:0;transform:translateY(36px) scale(0.98);transition:opacity 0.9s cubic-bezier(.5,0,0,1),transform 0.9s cubic-bezier(.5,0,0,1)}
+.reveal.active{opacity:1;transform:translateY(0) scale(1)}
+
+/* Glass — NO backdrop-filter (performance) */
+.glass-panel{background:rgba(255,255,255,0.92);border:1px solid rgba(255,255,255,0.72);box-shadow:0 10px 40px rgba(0,0,0,0.07)}
+.glass-dark{background:linear-gradient(135deg,rgba(18,28,58,0.97),rgba(10,18,40,0.99));border:1px solid rgba(197,160,89,0.30)}
+
+.glow-gold{box-shadow:0 0 30px rgba(197,160,89,0.4)}
+
+.text-gradient-gold{background:linear-gradient(to right,#c5a059,#e8d3a1,#c5a059);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-size:200% auto;animation:shine 5s linear infinite}
+@keyframes shine{to{background-position:200% center}}
+
+body{background-color:#fefcf8;background-image:radial-gradient(at 0% 0%,hsla(38,50%,95%,1) 0,transparent 50%),radial-gradient(at 100% 0%,hsla(215,30%,95%,1) 0,transparent 50%)}
+
+details>summary{list-style:none}
+details>summary::-webkit-details-marker{display:none}
+
+.gallery-item{overflow:hidden;border-radius:16px;cursor:pointer}
+.gallery-item img{transition:transform 0.5s ease;width:100%;height:100%;object-fit:cover;display:block}
+.gallery-item:hover img{transform:scale(1.06)}
+
+.price-row:hover{background:rgba(197,160,89,0.06);transform:translateX(4px)}
+.price-row{transition:all 0.25s ease}
+
+/* Nav link color utility */
+.nav-link{transition:color 0.3s}
+</style>
+</head>
+<body class="text-gray-700 antialiased font-sans overflow-x-hidden">
+
+<!-- Ambient BG (static, no scroll repaint) -->
+<div class="pointer-events-none fixed inset-0 z-0 overflow-hidden" aria-hidden="true">
+  <div class="absolute top-[-8%] left-[-8%] w-[38vw] h-[38vw] bg-amber-100/40 rounded-full blur-[100px]"></div>
+  <div class="absolute top-[35%] right-[-5%] w-[28vw] h-[28vw] bg-blue-100/30 rounded-full blur-[80px]"></div>
+  <div class="absolute bottom-[-8%] left-[22%] w-[32vw] h-[32vw] bg-brand-gold/10 rounded-full blur-[120px]"></div>
+</div>
+
+<!-- ===== NAVBAR ===== -->
+<header id="navbar" class="fixed w-full z-50 transition-all duration-400" style="background:transparent;border-bottom:1px solid transparent;backdrop-filter:none">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+
+      <!-- Logo -->
+      <div class="flex-shrink-0 cursor-pointer" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <img src="https://vlasta-premier.vn/wp-content/uploads/2026/03/logo.png"
+             alt="Vlasta Premier" id="logo-img"
+             style="height:46px;width:auto;display:block;filter:brightness(0) invert(1);transition:filter 0.35s">
+      </div>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-4 xl:gap-5">
+        <a href="#tong-quan"  class="nav-link text-white/90 text-[11px] font-medium hover:text-brand-goldlight tracking-wider uppercase">Tổng Quan</a>
+        <a href="#chu-dau-tu" class="nav-link text-white/90 text-[11px] font-medium hover:text-brand-goldlight tracking-wider uppercase">Chủ Đầu Tư</a>
+        <a href="#vi-tri"     class="nav-link text-white/90 text-[11px] font-medium hover:text-brand-goldlight tracking-wider uppercase">Vị Trí</a>
+        <a href="#tien-ich"   class="nav-link text-white/90 text-[11px] font-medium hover:text-brand-goldlight tracking-wider uppercase">Tiện Ích</a>
+        <a href="#hinh-anh"   class="nav-link text-white/90 text-[11px] font-medium hover:text-brand-goldlight tracking-wider uppercase">Hình Ảnh</a>
+        <a href="#mat-bang"   class="nav-link text-white/90 text-[11px] font-medium hover:text-brand-goldlight tracking-wider uppercase">Mặt Bằng</a>
+        <a href="#gia-ban"    class="nav-link text-white/90 text-[11px] font-medium hover:text-brand-goldlight tracking-wider uppercase">Giá Bán</a>
+        <a href="#tin-tuc"    class="nav-link text-white/90 text-[11px] font-medium hover:text-brand-goldlight tracking-wider uppercase">Tin Tức</a>
+        <a href="#lien-he"    class="bg-brand-gold hover:bg-brand-goldlight text-white hover:text-brand-navy text-[11px] font-bold px-4 py-2 rounded-full uppercase tracking-wider transition-colors">Liên Hệ</a>
+      </nav>
+
+      <!-- Mobile toggle -->
+      <button id="mobile-toggle" class="lg:hidden p-2 rounded-lg" style="color:white"
+              onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+              aria-label="Menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden lg:hidden" style="background:rgba(10,18,40,0.97);border-top:1px solid rgba(197,160,89,0.2)">
+    <div class="max-w-7xl mx-auto px-4 py-4 grid grid-cols-2 gap-2">
+      <a href="#tong-quan"  onclick="closeMobile()" class="text-white/85 text-sm py-2 px-3 rounded-lg hover:bg-white/10">Tổng Quan</a>
+      <a href="#chu-dau-tu" onclick="closeMobile()" class="text-white/85 text-sm py-2 px-3 rounded-lg hover:bg-white/10">Chủ Đầu Tư</a>
+      <a href="#vi-tri"     onclick="closeMobile()" class="text-white/85 text-sm py-2 px-3 rounded-lg hover:bg-white/10">Vị Trí</a>
+      <a href="#tien-ich"   onclick="closeMobile()" class="text-white/85 text-sm py-2 px-3 rounded-lg hover:bg-white/10">Tiện Ích</a>
+      <a href="#hinh-anh"   onclick="closeMobile()" class="text-white/85 text-sm py-2 px-3 rounded-lg hover:bg-white/10">Hình Ảnh</a>
+      <a href="#mat-bang"   onclick="closeMobile()" class="text-white/85 text-sm py-2 px-3 rounded-lg hover:bg-white/10">Mặt Bằng</a>
+      <a href="#gia-ban"    onclick="closeMobile()" class="text-white/85 text-sm py-2 px-3 rounded-lg hover:bg-white/10">Giá Bán</a>
+      <a href="#tin-tuc"    onclick="closeMobile()" class="text-white/85 text-sm py-2 px-3 rounded-lg hover:bg-white/10">Tin Tức</a>
+      <a href="#lien-he"    onclick="closeMobile()" class="col-span-2 text-center bg-brand-gold text-white text-sm py-2.5 rounded-lg font-bold uppercase tracking-wider">Liên Hệ</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="relative h-[100vh] min-h-[700px] flex items-center justify-center overflow-hidden">
+  <div class="absolute inset-0 z-0">
+    <img src="https://vlastapremier.vanphu.vn/phuthuan/backend/uploads/Frame_1984079385_d53672fe5b.png"
+         alt="Vlasta Premier Hero"
+         class="w-full h-full object-cover"
+         style="transform:scale(1.05)">
+    <div class="absolute inset-0 bg-gradient-to-b from-brand-navydark/80 via-brand-navy/40 to-brand-cream/90"></div>
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-brand-gold rounded-full blur-[1px] animate-sparkle"></div>
+      <div class="absolute top-1/3 right-1/4 w-3 h-3 bg-brand-goldlight rounded-full blur-[2px] animate-sparkle" style="animation-delay:1.5s"></div>
+      <div class="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 bg-white rounded-full blur-[1px] animate-sparkle" style="animation-delay:0.7s"></div>
+      <div class="absolute bottom-1/4 right-1/3 w-2.5 h-2.5 bg-brand-gold rounded-full blur-[2px] animate-sparkle" style="animation-delay:2s"></div>
+    </div>
+  </div>
+
+  <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20">
+    <div class="glass-dark p-10 md:p-14 rounded-3xl inline-block max-w-[92%] md:max-w-full">
+      <p class="text-brand-goldlight text-xs md:text-sm font-medium tracking-[0.4em] uppercase mb-6">Biểu tượng sống thượng lưu</p>
+      <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+        Bình yên bên sông<br>
+        <span class="italic font-light text-gradient-gold">Phồn hoa trong phố</span>
+      </h1>
+      <p class="text-gray-200 text-base md:text-lg font-light mb-10 max-w-2xl mx-auto leading-relaxed">
+        Khơi nguồn cảm hứng mỗi ngày tại Vlasta Premier Phú Thuận — tuyệt tác kiến trúc ven sông, nơi giao thoa hoàn mỹ giữa thiên nhiên thanh bình và nhịp sống đô thị năng động của Nam Sài Gòn.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="#chinh-sach" class="relative group">
+          <div class="absolute -inset-1 bg-gradient-to-r from-brand-gold to-brand-goldlight rounded-full blur opacity-70 group-hover:opacity-100 transition duration-300"></div>
+          <div class="relative bg-brand-navy hover:bg-brand-navydark text-white px-8 py-4 rounded-full font-medium tracking-wide transition-all uppercase text-sm flex items-center justify-center gap-2">
+            Khám Phá Chính Sách
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </div>
+        </a>
+        <a href="#lien-he" class="border border-white/50 text-white px-8 py-4 rounded-full font-medium tracking-wide hover:bg-white/10 transition-all uppercase text-sm flex items-center justify-center gap-2">
+          Nhận Bảng Giá
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TỔNG QUAN ===== -->
+<section id="tong-quan" class="py-24 relative z-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-center reveal">
+      <div class="relative animate-float">
+        <div class="absolute -inset-4 bg-brand-gold/15 rounded-3xl blur-2xl"></div>
+        <img src="https://vlastapremier.vanphu.vn/phuthuan/backend/uploads/jpeg_optimizer_Model_1_0866f93ea8.jpeg"
+             alt="Lifestyle Vlasta Premier"
+             class="relative rounded-3xl shadow-2xl w-full object-cover h-[500px] border border-white/40">
+        <div class="absolute -bottom-8 -right-8 glass-panel p-6 rounded-2xl w-64 hidden md:block glow-gold animate-float-delayed">
+          <p class="font-serif text-4xl text-brand-gold mb-1">602</p>
+          <p class="text-sm font-medium text-brand-navy uppercase tracking-widest">Căn hộ hữu hạn</p>
+          <div class="w-full h-px bg-brand-gold/30 my-3"></div>
+          <p class="text-xs text-gray-500 font-light">Không gian sống độc bản bên sông</p>
+        </div>
+      </div>
+
+      <div class="glass-panel p-10 md:p-12 rounded-3xl">
+        <p class="text-brand-gold font-medium tracking-[0.2em] uppercase text-sm mb-4">Câu chuyện dự án</p>
+        <h2 class="font-serif text-4xl lg:text-5xl text-brand-navy mb-8 leading-tight">Khởi nguồn của những<br><span class="italic text-brand-gold">Hạnh phúc đích thực</span></h2>
+        <p class="text-gray-600 leading-relaxed text-lg font-light mb-8">
+          Phát triển bởi <strong>Văn Phú – Invest</strong> với triết lý <em>"Vị nhân sinh"</em>, Vlasta Premier không chỉ xây dựng những khối bê tông vô tri, mà đang kiến tạo một di sản truyền đời. Một không gian sống giàu trải nghiệm, nơi bạn gác lại bộn bề sau cánh cửa và thả mình vào làn gió mát rượi từ mặt sông.
+        </p>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-white/60 p-4 rounded-xl border border-white/60">
+            <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Quy mô</p>
+            <p class="font-bold text-brand-navy">2 Tòa tháp · 30 Tầng</p>
+          </div>
+          <div class="bg-white/60 p-4 rounded-xl border border-white/60">
+            <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Thương mại dịch vụ</p>
+            <p class="font-bold text-brand-navy">136 Căn TMDV</p>
+          </div>
+          <div class="bg-white/60 p-4 rounded-xl border border-white/60">
+            <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Pháp lý</p>
+            <p class="font-bold text-brand-navy">Sở hữu lâu dài</p>
+          </div>
+          <div class="bg-white/60 p-4 rounded-xl border border-white/60">
+            <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Bàn giao dự kiến</p>
+            <p class="font-bold text-brand-navy">Quý 4 / 2027</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CHỦ ĐẦU TƯ ===== -->
+<section id="chu-dau-tu" class="py-24 relative z-10 bg-brand-navydark overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-brand-navydark via-[#0d1e3a] to-brand-navy opacity-95"></div>
+  <div class="absolute top-1/3 left-1/4 w-96 h-96 bg-brand-gold/10 rounded-full blur-[100px] pointer-events-none animate-pulse-glow"></div>
+  <div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-brand-gold/8 rounded-full blur-[80px] pointer-events-none animate-pulse-glow" style="animation-delay:2s"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <!-- Header -->
+    <div class="text-center mb-16 reveal">
+      <p class="text-brand-gold font-medium tracking-[0.25em] uppercase text-sm mb-4">Đơn vị phát triển dự án</p>
+      <h2 class="font-serif text-4xl md:text-5xl text-white mb-6">Bảo Chứng Thương Hiệu <span class="text-gradient-gold">Văn Phú</span></h2>
+      <p class="text-gray-400 font-light text-lg max-w-2xl mx-auto">Vlasta Premier – Phú Thuận được phát triển bởi Văn Phú, thương hiệu bất động sản theo đuổi triết lý vị nhân sinh, đặt con người và cộng đồng làm trọng tâm.</p>
+    </div>
+
+    <!-- Logo + Content -->
+    <div class="grid lg:grid-cols-2 gap-12 items-center reveal mb-16">
+      <!-- Logo block -->
+      <div class="flex flex-col items-center lg:items-start gap-8">
+        <div class="glass-dark rounded-2xl p-10 flex items-center justify-center w-full max-w-sm">
+          <img src="https://vlasta-premier.vn/wp-content/uploads/2026/01/VP_Logo-website-header.png"
+               alt="Văn Phú Invest"
+               class="max-h-20 w-auto object-contain"
+               style="filter:brightness(0) invert(1)"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="font-serif text-3xl text-white hidden">VĂN PHÚ</span>
+        </div>
+
+        <!-- 3 stats -->
+        <div class="grid grid-cols-3 gap-4 w-full max-w-sm">
+          <div class="text-center">
+            <div class="font-serif text-4xl text-brand-goldlight mb-1">23<span class="text-xl text-brand-gold">+</span></div>
+            <p class="text-gray-500 text-xs uppercase tracking-wider">Năm kinh nghiệm</p>
+          </div>
+          <div class="text-center border-x border-brand-gold/20">
+            <div class="font-serif text-4xl text-brand-goldlight mb-1">50<span class="text-xl text-brand-gold">+</span></div>
+            <p class="text-gray-500 text-xs uppercase tracking-wider">Dự án hoàn thành</p>
+          </div>
+          <div class="text-center">
+            <div class="font-serif text-4xl text-brand-goldlight mb-1">Top<span class="text-xl text-brand-gold">10</span></div>
+            <p class="text-gray-500 text-xs uppercase tracking-wider">CTCP Bất động sản</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copy -->
+      <div>
+        <blockquote class="text-gray-300 text-xl font-serif italic leading-relaxed mb-8 border-l-4 border-brand-gold pl-6">
+          "Bất động sản vị nhân sinh — không chỉ là nơi ở, mà là không gian kiến tạo cuộc sống và tích lũy tài sản thế hệ."
+        </blockquote>
+        <p class="text-gray-400 font-light text-base leading-relaxed mb-8">
+          Vlasta Premier – Phú Thuận không chỉ là nơi an cư, mà còn là tài sản tích lũy dài hạn tại tâm điểm phát triển của Nam Sài Gòn. Mỗi không gian được thiết kế lấy cư dân làm trung tâm, kiến tạo cộng đồng tinh hoa, văn minh.
+        </p>
+        <div class="glass-dark rounded-xl px-5 py-3 inline-flex items-center gap-3 border border-brand-gold/20">
+          <div class="w-2 h-2 rounded-full bg-brand-gold"></div>
+          <p class="text-gray-300 text-sm"><span class="text-brand-goldlight font-medium">Pháp nhân dự án:</span> Công ty CP Đầu tư Xây dựng New Tech · MST 0313333920</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Partners -->
+    <div class="reveal">
+      <p class="text-center text-gray-500 text-xs uppercase tracking-[0.3em] mb-8">Đối tác chiến lược</p>
+      <div class="flex flex-wrap justify-center gap-6 items-center">
+        <!-- Newtecons -->
+        <div class="glass-dark rounded-2xl px-8 py-5 flex items-center gap-4 border border-brand-gold/15 hover:border-brand-gold/40 transition-colors">
+          <img src="https://vlastapremier.vanphu.vn/phuthuan/backend/uploads/Frame_1984079253_d9fbc31434.png"
+               alt="Newtecons" class="h-10 w-auto object-contain"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="font-bold text-white text-sm hidden">NEWTECONS</span>
+          <div>
+            <p class="text-white font-medium text-sm">Newtecons</p>
+            <p class="text-gray-500 text-xs">Đơn vị thi công</p>
+          </div>
+        </div>
+        <!-- CBRE -->
+        <div class="glass-dark rounded-2xl px-8 py-5 flex items-center gap-4 border border-brand-gold/15 hover:border-brand-gold/40 transition-colors">
+          <img src="https://vlastapremier.vanphu.vn/phuthuan/backend/uploads/a93a37e950f32db5db54c102abb4e3931a6b394a_62b96d6697.png"
+               alt="CBRE" class="h-10 w-auto object-contain"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="font-bold text-white text-sm hidden">CBRE</span>
+          <div>
+            <p class="text-white font-medium text-sm">CBRE</p>
+            <p class="text-gray-500 text-xs">Đơn vị vận hành & quản lý</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VỊ TRÍ ===== -->
+<section id="vi-tri" class="py-24 relative z-10 bg-brand-cream/50 border-y border-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+      <p class="text-brand-gold font-medium tracking-[0.2em] uppercase text-sm mb-4">Tọa độ vàng</p>
+      <h2 class="font-serif text-4xl md:text-5xl text-brand-navy mb-6">Tâm Điểm Kết Nối Nam Sài Gòn</h2>
+      <p class="text-gray-600 font-light text-lg">Giao thoa giữa đại lộ Nguyễn Văn Linh và cung đường ven sông Đào Trí, thừa hưởng trọn vẹn dư địa phát triển hạ tầng mạnh mẽ.</p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-12 items-center reveal">
+      <div class="glass-panel p-8 md:p-12 rounded-3xl order-2 lg:order-1">
+        <h3 class="font-serif text-2xl text-brand-navy mb-6">Mạng lưới giao thông chiến lược</h3>
+        <ul class="space-y-6">
+          <li class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold flex-shrink-0">
+              <span class="font-bold font-serif text-lg">5'</span>
+            </div>
+            <div>
+              <p class="font-bold text-brand-navy mb-1">Khu đô thị Phú Mỹ Hưng</p>
+              <p class="text-sm text-gray-600 font-light">Kết nối trực tiếp tới trung tâm tài chính, thương mại Lotte, trường học quốc tế và bệnh viện FV.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold flex-shrink-0">
+              <span class="font-bold font-serif text-lg">10'</span>
+            </div>
+            <div>
+              <p class="font-bold text-brand-navy mb-1">Trung tâm hành chính Q1, Q4</p>
+              <p class="text-sm text-gray-600 font-light">Di chuyển nhanh chóng qua trục Nguyễn Tất Thành và cầu Tân Thuận.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold flex-shrink-0">
+              <span class="font-bold font-serif text-lg">15'</span>
+            </div>
+            <div>
+              <p class="font-bold text-brand-navy mb-1">Trung tâm tài chính Thủ Thiêm</p>
+              <p class="text-sm text-gray-600 font-light">Đón đầu hạ tầng Cầu Thủ Thiêm 4 tương lai, rút ngắn khoảng cách sang TP. Thủ Đức.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="relative order-1 lg:order-2 rounded-3xl overflow-hidden shadow-2xl border-4 border-white/50 group">
+        <img src="https://vlastapremier.vanphu.vn/phuthuan/backend/uploads/Mep_fix_01_1_af79c3e238.png"
+             alt="Bản đồ vị trí Vlasta Premier"
+             class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700">
+        <div class="absolute inset-0 bg-brand-navy/10 group-hover:bg-transparent transition-all"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SẢN PHẨM ===== -->
+<section id="san-pham" class="py-24 relative z-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 reveal glass-panel p-8 rounded-3xl">
+      <h2 class="font-serif text-4xl text-brand-navy mb-4">Bộ Sưu Tập Không Gian Sống</h2>
+      <div class="w-16 h-1 bg-brand-gold mx-auto mb-6"></div>
+      <p class="text-gray-600 font-light max-w-2xl mx-auto">Kiến trúc bo cong mềm mại khai thác tối đa lợi thế cảnh quan, mở rộng trải nghiệm sống với hệ cửa kính lớn, ban công thoáng đón trọn ánh sáng và tầm nhìn panorama.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
+      <div class="bg-white/85 rounded-2xl p-8 border border-white shadow-lg hover:-translate-y-2 transition-transform duration-300">
+        <h3 class="font-serif text-2xl text-brand-gold mb-2">1PN / 1PN+</h3>
+        <p class="text-xs uppercase tracking-widest text-gray-400 mb-4 pb-4 border-b border-gray-200">Độc lập & Tinh tế</p>
+        <p class="text-gray-600 font-light text-sm">Thiết kế tối ưu công năng, không gian linh hoạt có thể bố trí thêm góc làm việc. Phù hợp cho người độc thân, chuyên gia hoặc nhà đầu tư cho thuê.</p>
+      </div>
+      <div class="bg-white/85 rounded-2xl p-8 border border-white shadow-lg hover:-translate-y-2 transition-transform duration-300">
+        <h3 class="font-serif text-2xl text-brand-gold mb-2">2 Phòng Ngủ</h3>
+        <p class="text-xs uppercase tracking-widest text-gray-400 mb-4 pb-4 border-b border-gray-200">Tổ ấm vẹn tròn</p>
+        <p class="text-gray-600 font-light text-sm">Cân bằng hoàn hảo giữa không gian sinh hoạt chung và sự riêng tư. Lựa chọn lý tưởng cho các gia đình trẻ hoặc cặp vợ chồng có con nhỏ.</p>
+      </div>
+      <div class="bg-white/85 rounded-2xl p-8 border border-white shadow-lg hover:-translate-y-2 transition-transform duration-300">
+        <h3 class="font-serif text-2xl text-brand-gold mb-2">3 Phòng Ngủ</h3>
+        <p class="text-xs uppercase tracking-widest text-gray-400 mb-4 pb-4 border-b border-gray-200">Đa thế hệ gắn kết</p>
+        <p class="text-gray-600 font-light text-sm">Không gian rộng rãi, thoáng đãng, các phòng ngủ lấy sáng tự nhiên tối đa. Phù hợp gia đình nhiều thế hệ sống chung.</p>
+      </div>
+      <div class="bg-brand-navy rounded-2xl p-8 shadow-lg hover:-translate-y-2 transition-transform duration-300 relative overflow-hidden group">
+        <div class="absolute inset-0 bg-brand-gold/10 group-hover:bg-brand-gold/20 transition-colors"></div>
+        <h3 class="font-serif text-2xl text-brand-goldlight mb-2 relative z-10">Penthouse Duplex</h3>
+        <p class="text-xs uppercase tracking-widest text-brand-gold/70 mb-4 pb-4 border-b border-brand-gold/20 relative z-10">Phiên bản giới hạn</p>
+        <p class="text-gray-300 font-light text-sm relative z-10">Dòng sản phẩm hữu hạn trên tầng không. Tầm nhìn không giới hạn ôm trọn khúc giao thủy hiền hòa của Nam Sài Gòn.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TIỆN ÍCH ===== -->
+<section id="tien-ich" class="py-24 relative z-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+      <p class="text-brand-gold font-medium tracking-[0.2em] uppercase text-sm mb-4">Hệ sinh thái đặc quyền</p>
+      <h2 class="font-serif text-4xl md:text-5xl text-brand-navy mb-6">Trọn vẹn từng khoảnh khắc</h2>
+      <p class="text-gray-600 font-light text-lg">Thiết kế xoay quanh 4 giá trị cốt lõi: Sống – Làm việc – Học tập – Cân bằng, nuôi dưỡng trọn vẹn Thân, Tâm, Trí ngay tại thềm nhà.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="glass-panel rounded-3xl overflow-hidden group hover:shadow-2xl transition-all duration-500 reveal flex flex-col md:flex-row h-full">
+        <div class="md:w-1/2 overflow-hidden min-h-[250px]">
+          <img src="https://vlastapremier.vanphu.vn/phuthuan/backend/uploads/jpeg_optimizer_Asset_Rap_phim_4c8c600db1.jpeg"
+               class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" alt="Giải trí">
+        </div>
+        <div class="md:w-1/2 p-8 flex flex-col justify-center bg-white/40">
+          <p class="text-brand-gold text-xs font-bold tracking-widest uppercase mb-2">LIVE</p>
+          <h3 class="font-serif text-2xl text-brand-navy mb-3">Gắn kết niềm vui</h3>
+          <p class="text-gray-600 font-light text-sm leading-relaxed">Khối đế thương mại, Business Lounge, rạp chiếu phim mini và phòng Golf 3D thượng lưu. Cư dân tận hưởng giải trí đa dạng ngay dưới chân nhà.</p>
+        </div>
+      </div>
+
+      <div class="glass-panel rounded-3xl overflow-hidden group hover:shadow-2xl transition-all duration-500 reveal flex flex-col md:flex-row h-full">
+        <div class="md:w-1/2 overflow-hidden order-1 md:order-2 min-h-[250px]">
+          <img src="https://vlastapremier.vanphu.vn/phuthuan/backend/uploads/jpeg_optimizer_Co_Working_Space_1_4575c0cfc2.jpeg"
+               class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" alt="Co-working">
+        </div>
+        <div class="md:w-1/2 p-8 flex flex-col justify-center bg-white/40 order-2 md:order-1">
+          <p class="text-brand-gold text-xs font-bold tracking-widest uppercase mb-2">WORK</p>
+          <h3 class="font-serif text-2xl text-brand-navy mb-3">Không gian sáng tạo</h3>
+          <p class="text-gray-600 font-light text-sm leading-relaxed">Co-working Space rộng hơn 1.000m² tại tầng 5 — môi trường làm việc linh hoạt, truyền cảm hứng cho chuyên gia, chủ doanh nghiệp.</p>
+        </div>
+      </div>
+
+      <div class="glass-panel rounded-3xl overflow-hidden group hover:shadow-2xl transition-all duration-500 reveal flex flex-col md:flex-row h-full">
+        <div class="md:w-1/2 overflow-hidden min-h-[250px]">
+          <img src="https://vlastapremier.vanphu.vn/phuthuan/backend/uploads/jpeg_optimizer_Anh_resize_1_gigapixel_standard_v2_4x_be84d8a1fa.jpeg"
+               class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" alt="Thư viện">
+        </div>
+        <div class="md:w-1/2 p-8 flex flex-col justify-center bg-white/40">
+          <p class="text-brand-gold text-xs font-bold tracking-widest uppercase mb-2">LEARN</p>
+          <h3 class="font-serif text-2xl text-brand-navy mb-3">Nuôi dưỡng tri thức</h3>
+          <p class="text-gray-600 font-light text-sm leading-relaxed">Trường mầm non nội khu, thư viện và phòng đọc sách yên tĩnh. Môi trường lý tưởng để cư dân nhiều thế hệ phát triển bản thân.</p>
+        </div>
+      </div>
+
+      <div class="glass-panel rounded-3xl overflow-hidden group hover:shadow-2xl transition-all duration-500 reveal flex flex-col md:flex-row h-full">
+        <div class="md:w-1/2 overflow-hidden order-1 md:order-2 min-h-[250px]">
+          <img src="https://vlastapremier.vanphu.vn/phuthuan/backend/uploads/jpeg_optimizer_NTR_PV_11_Beboicocuc_552b68febc.jpg"
+               class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" alt="Hồ bơi">
+        </div>
+        <div class="md:w-1/2 p-8 flex flex-col justify-center bg-white/40 order-2 md:order-1">
+          <p class="text-brand-gold text-xs font-bold tracking-widest uppercase mb-2">WELL-BEING</p>
+          <h3 class="font-serif text-2xl text-brand-navy mb-3">Tái tạo năng lượng</h3>
+          <p class="text-gray-600 font-light text-sm leading-relaxed">Bể bơi Panorama vô cực hướng sông tầng 5, phòng Gym hiện đại, không gian Yoga và vườn thiền nội khu tĩnh lặng.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HÌNH ẢNH ===== -->
+<section id="hinh-anh" class="py-24 relative z-10 bg-brand-cream/50 border-y border-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+      <p class="text-brand-gold font-medium tracking-[0.2em] uppercase text-sm mb-4">Thư viện ảnh</p>
+      <h2 class="font-serif text-4xl md:text-5xl text-brand-navy mb-6">Kiệt Tác Từ Mọi Góc Nhìn</h2>
+      <p class="text-gray-600 font-light text-lg">Phối cảnh tổng thể, tầm nhìn sông, không gian tiện ích và căn hộ mẫu — trọn vẹn vẻ đẹp của Vlasta Premier Phú Thuận.</p>
+    </div>
+
+    <!-- Gallery grid -->
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 reveal">
+
+      <!-- Row 1: 2 wide + 2 square -->
+      <div class="gallery-item col-span-2 h-[260px] md:h-[300px] rounded-2xl shadow-lg">
+        <img src="https://vlastapremier.vanphu.vn/phuthuan/backend/uploads/NTR_PV_01_Tongthe_c2b959c8fc.jpg"
+             alt="Phối cảnh tổng thể Vlasta Premier" loading="lazy">
+      </div>
+      <div class="gallery-item h-[260px] md:h-[300px] rounded-2xl shadow-lg">
+        <img src="https://vlastapremier.vanphu.vn/phuthuan/backend/uploads/Rectangle_1788_f752808b75.jpg"
+             alt="Phối cảnh hai tháp" loading="lazy">
+      </div>
+      <div class="gallery-item h-[260px] md:h-[300px] rounded-2xl shadow-lg">
+        <img src="https://vlastapremier.vanphu.vn/phuthuan/backend/uploads/jpeg_optimizer_Song_dong_nai_6648b6debc.png"
+             alt="Tầm nhìn ven sông" loading="lazy">
+      </div>
+
+      <!-- Row 2 -->
+      <div class="gallery-item h-[220px] rounded-2xl shadow-lg">
+        <img src="https://vlastapremier.vanphu.vn/phuthuan/backend/uploads/Frame_1984079359_4ba664023a.png"
+             alt="View ban công hướng sông" loading="lazy">
+      </div>
+      <div class="gallery-item h-[220px] rounded-2xl shadow-lg">
+        <img src="https://vlastapremier.vanphu.vn/phuthuan/backend/uploads/58573215e112ba3997655563ca8aa11dc6e8a51d_28075597b7.jpg"
+             alt="Hồ bơi Panorama" loading="lazy">
+      </div>
+      <div class="gallery-item h-[220px] rounded-2xl shadow-lg">
+        <img src="https://vlasta-premier.vn/wp-content/uploads/2026/03/tienich-hoboi.webp"
+             alt="Hồ bơi view sông" loading="lazy">
+      </div>
+      <div class="gallery-item h-[220px] rounded-2xl shadow-lg">
+        <img src="https://vlastapremier.vanphu.vn/phuthuan/backend/uploads/jpeg_optimizer_Co_Working_Space_1_4575c0cfc2.jpeg"
+             alt="Co-working Space" loading="lazy">
+      </div>
+
+      <!-- Row 3 -->
+      <div class="gallery-item h-[220px] rounded-2xl shadow-lg">
+        <img src="https://vlasta-premier.vn/wp-content/uploads/2026/04/NTR_PV_09_BBQ_d00e8cdb6e.webp"
+             alt="BBQ sân vườn" loading="lazy">
+      </div>
+      <div class="gallery-item col-span-2 h-[220px] rounded-2xl shadow-lg">
+        <img src="https://vlastapremier.vanphu.vn/phuthuan/backend/uploads/jpeg_optimizer_NTR_Int_PV_01_Can3_PN_Phong_Khach_affc6246e1.jpeg"
+             alt="Phòng khách căn hộ mẫu" loading="lazy">
+      </div>
+      <div class="gallery-item h-[220px] rounded-2xl shadow-lg">
+        <img src="https://namlonghomes.com.vn/wp-content/uploads/2026/01/thiet-ke-layout-mat-bang-can-ho-vlasta-premier-thap-a-4-scaled.jpg"
+             alt="Layout nội thất căn hộ" loading="lazy">
+      </div>
+    </div>
+
+    <div class="text-center mt-10 reveal">
+      <a href="#lien-he" class="inline-flex items-center gap-2 border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-white transition-colors px-8 py-3 rounded-full text-sm font-medium uppercase tracking-wider">
+        Nhận Album Ảnh Đầy Đủ
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Quote Break -->
+<section class="h-[55vh] relative flex items-center justify-center overflow-hidden">
+  <img src="https://vlastapremier.vanphu.vn/phuthuan/backend/uploads/Frame_1984079359_4ba664023a.png"
+       alt="" class="absolute inset-0 w-full h-full object-cover scale-110" aria-hidden="true">
+  <div class="absolute inset-0 bg-brand-navydark/50"></div>
+  <div class="relative z-10 text-center px-4 glass-dark p-12 rounded-3xl mx-4 max-w-3xl">
+    <h2 class="font-serif text-4xl md:text-5xl text-white mb-6">Mọi Góc Nhìn Đều Là Kiệt Tác</h2>
+    <div class="w-16 h-px bg-brand-gold mx-auto mb-6"></div>
+    <p class="text-brand-goldlight text-lg font-light italic leading-relaxed">"Mỗi sớm mai thức giấc, đón ánh bình minh lấp lánh trên mặt sông tĩnh lặng, lắng nghe nhịp chảy của tự nhiên hòa vào hơi thở của phố thị."</p>
+  </div>
+</section>
+
+<!-- ===== MẶT BẰNG ===== -->
+<section id="mat-bang" class="py-24 relative z-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+      <p class="text-brand-gold font-medium tracking-[0.2em] uppercase text-sm mb-4">Quy hoạch dự án</p>
+      <h2 class="font-serif text-4xl md:text-5xl text-brand-navy mb-6">Mặt Bằng Tối Ưu Cho Trải Nghiệm Sống</h2>
+      <p class="text-gray-600 font-light text-lg">2 tháp căn hộ, hệ khối đế thương mại dịch vụ và tầng tiện ích đa chức năng. Mỗi mặt bằng tối ưu ánh sáng, thông gió và tầm nhìn.</p>
+    </div>
+
+    <!-- Stats row -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16 reveal">
+      <div class="glass-panel rounded-2xl p-6 text-center">
+        <div class="font-serif text-5xl text-brand-gold mb-2">2</div>
+        <p class="text-brand-navy font-semibold text-sm uppercase tracking-wider">Tháp A & B</p>
+        <p class="text-gray-500 text-xs mt-1">Tháp căn hộ</p>
+      </div>
+      <div class="glass-panel rounded-2xl p-6 text-center">
+        <div class="font-serif text-5xl text-brand-gold mb-2">30</div>
+        <p class="text-brand-navy font-semibold text-sm uppercase tracking-wider">Tầng</p>
+        <p class="text-gray-500 text-xs mt-1">Cao ốc căn hộ</p>
+      </div>
+      <div class="glass-panel rounded-2xl p-6 text-center">
+        <div class="font-serif text-5xl text-brand-gold mb-2">602</div>
+        <p class="text-brand-navy font-semibold text-sm uppercase tracking-wider">Căn hộ</p>
+        <p class="text-gray-500 text-xs mt-1">Không gian ở</p>
+      </div>
+      <div class="glass-panel rounded-2xl p-6 text-center">
+        <div class="font-serif text-5xl text-brand-gold mb-2">7</div>
+        <p class="text-brand-navy font-semibold text-sm uppercase tracking-wider">Thang máy</p>
+        <p class="text-gray-500 text-xs mt-1">5 dân cư + 2 TM</p>
+      </div>
+    </div>
+
+    <!-- Floor plan images -->
+    <div class="grid md:grid-cols-3 gap-6 mb-16 reveal">
+      <div class="group">
+        <div class="rounded-2xl overflow-hidden shadow-xl border-2 border-white mb-3 h-[280px]">
+          <img src="https://vlasta-premier.vn/wp-content/uploads/2026/04/tang-dien-hinh-Vlasta-Phu-Thuan.jpeg"
+               alt="Mặt bằng tầng điển hình"
+               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+        </div>
+        <p class="text-center font-medium text-brand-navy text-sm">Tầng điển hình tổng thể</p>
+      </div>
+      <div class="group">
+        <div class="rounded-2xl overflow-hidden shadow-xl border-2 border-white mb-3 h-[280px]">
+          <img src="https://vlasta-premier.vn/wp-content/uploads/2026/05/Vlasta-Thap-A-1024x793.webp"
+               alt="Mặt bằng Tháp A"
+               class="w-full h-full object-contain bg-gray-50 group-hover:scale-105 transition-transform duration-500" loading="lazy">
+        </div>
+        <p class="text-center font-medium text-brand-navy text-sm">Mặt bằng Tháp A</p>
+      </div>
+      <div class="group">
+        <div class="rounded-2xl overflow-hidden shadow-xl border-2 border-white mb-3 h-[280px]">
+          <img src="https://vlasta-premier.vn/wp-content/uploads/2026/05/Vlasta-Thap-B-1024x793.webp"
+               alt="Mặt bằng Tháp B"
+               class="w-full h-full object-contain bg-gray-50 group-hover:scale-105 transition-transform duration-500" loading="lazy">
+        </div>
+        <p class="text-center font-medium text-brand-navy text-sm">Mặt bằng Tháp B</p>
+      </div>
+    </div>
+
+    <!-- Types table -->
+    <div class="glass-panel rounded-3xl overflow-hidden reveal">
+      <div class="p-6 border-b border-gray-100">
+        <h3 class="font-serif text-2xl text-brand-navy">Loại Căn Hộ Tham Khảo</h3>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead class="bg-brand-navy text-white">
+            <tr>
+              <th class="px-6 py-4 text-left font-medium tracking-wider">Loại căn</th>
+              <th class="px-6 py-4 text-right font-medium tracking-wider">Diện tích</th>
+              <th class="px-6 py-4 text-left font-medium tracking-wider">Phù hợp với</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            <tr class="price-row">
+              <td class="px-6 py-4 font-semibold text-brand-navy">1PN</td>
+              <td class="px-6 py-4 text-right text-gray-600">44 – 50 m²</td>
+              <td class="px-6 py-4 text-gray-600">Người độc thân, chuyên gia, đầu tư cho thuê</td>
+            </tr>
+            <tr class="price-row">
+              <td class="px-6 py-4 font-semibold text-brand-navy">1PN+ / 1PN+1</td>
+              <td class="px-6 py-4 text-right text-gray-600">50 – 58 m²</td>
+              <td class="px-6 py-4 text-gray-600">Gia đình trẻ, người cần thêm góc làm việc</td>
+            </tr>
+            <tr class="price-row">
+              <td class="px-6 py-4 font-semibold text-brand-navy">2PN</td>
+              <td class="px-6 py-4 text-right text-gray-600">68 – 80 m²</td>
+              <td class="px-6 py-4 text-gray-600">Gia đình trẻ, cặp vợ chồng có con nhỏ</td>
+            </tr>
+            <tr class="price-row">
+              <td class="px-6 py-4 font-semibold text-brand-navy">3PN</td>
+              <td class="px-6 py-4 text-right text-gray-600">90 – 102 m²</td>
+              <td class="px-6 py-4 text-gray-600">Gia đình cần không gian rộng, căn góc, view đẹp</td>
+            </tr>
+            <tr class="price-row">
+              <td class="px-6 py-4 font-semibold text-brand-navy">Penthouse Duplex</td>
+              <td class="px-6 py-4 text-right text-gray-600">180 – 250 m²</td>
+              <td class="px-6 py-4 text-gray-600">Sản phẩm giới hạn, khách hàng thượng lưu</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="p-6 bg-brand-gold/5 border-t border-brand-gold/15 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-gray-500 text-xs italic">(*) Diện tích mang tính tham khảo, chi tiết theo hợp đồng mua bán chính thức.</p>
+        <a href="#lien-he" class="flex-shrink-0 bg-brand-navy text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-brand-gold transition-colors uppercase tracking-wider">Nhận Full Layout</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GIÁ BÁN ===== -->
+<section id="gia-ban" class="py-24 relative z-10 bg-brand-cream/50 border-y border-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+      <p class="text-brand-gold font-medium tracking-[0.2em] uppercase text-sm mb-4">Bảng giá cập nhật</p>
+      <h2 class="font-serif text-4xl md:text-5xl text-brand-navy mb-6">Giá Bán Vlasta Premier</h2>
+      <p class="text-gray-600 font-light text-lg">Đa dạng lựa chọn 1PN, 2PN, 3PN và Penthouse Duplex — phù hợp nhiều nhu cầu an cư, tích sản và đầu tư cho thuê.</p>
+    </div>
+
+    <!-- Price highlight -->
+    <div class="glass-panel rounded-3xl p-8 md:p-12 mb-10 reveal text-center">
+      <p class="text-gray-500 text-sm mb-3 uppercase tracking-wider">Biên giá tham khảo</p>
+      <div class="font-serif text-5xl md:text-6xl text-brand-navy mb-2">
+        75 – 90 <span class="text-3xl text-brand-gold">triệu/m²</span>
+      </div>
+      <p class="text-gray-500 text-sm italic mt-2">Giá thực tế theo giỏ căn và chính sách áp dụng tại từng đợt bán hàng</p>
+    </div>
+
+    <!-- Price table -->
+    <div class="glass-panel rounded-3xl overflow-hidden reveal mb-10">
+      <div class="p-6 border-b border-gray-100 flex justify-between items-center">
+        <h3 class="font-serif text-2xl text-brand-navy">Giá Tham Khảo Theo Loại Căn</h3>
+        <span class="text-xs text-gray-400 bg-gray-100 px-3 py-1 rounded-full">Dự kiến · Có thể thay đổi</span>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead class="bg-brand-navy text-white">
+            <tr>
+              <th class="px-6 py-4 text-left font-medium tracking-wider">Loại căn</th>
+              <th class="px-6 py-4 text-right font-medium tracking-wider">Diện tích</th>
+              <th class="px-6 py-4 text-right font-medium tracking-wider">Giá tham khảo</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            <tr class="price-row">
+              <td class="px-6 py-5 font-semibold text-brand-navy">Căn 1PN / 1PN+</td>
+              <td class="px-6 py-5 text-right text-gray-600">50 – 58 m²</td>
+              <td class="px-6 py-5 text-right font-bold text-brand-gold">khoảng 4,35 – 5,74 tỷ</td>
+            </tr>
+            <tr class="price-row">
+              <td class="px-6 py-5 font-semibold text-brand-navy">Căn 2PN</td>
+              <td class="px-6 py-5 text-right text-gray-600">77 – 80 m²</td>
+              <td class="px-6 py-5 text-right font-bold text-brand-gold">khoảng 6,36 – 8,24 tỷ</td>
+            </tr>
+            <tr class="price-row">
+              <td class="px-6 py-5 font-semibold text-brand-navy">Căn 3PN</td>
+              <td class="px-6 py-5 text-right text-gray-600">101 – 102 m²</td>
+              <td class="px-6 py-5 text-right font-bold text-brand-gold">khoảng 8,15 – 9,57 tỷ</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- CTA block -->
+    <div class="grid sm:grid-cols-2 gap-4 reveal">
+      <a href="#lien-he" class="group relative overflow-hidden rounded-2xl shadow-lg">
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-gold to-[#d4b475] group-hover:scale-105 transition-transform duration-300"></div>
+        <div class="relative px-8 py-5 text-white font-medium tracking-wider uppercase text-sm flex justify-center items-center gap-2">
+          Nhận Bảng Giá Mới Nhất
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </div>
+      </a>
+      <a href="#lien-he" class="border-2 border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white transition-colors rounded-2xl px-8 py-5 font-medium tracking-wider uppercase text-sm flex justify-center items-center gap-2">
+        Tư Vấn Căn Phù Hợp Ngân Sách
+      </a>
+    </div>
+    <p class="text-center text-gray-400 text-xs mt-5 italic">(*) Giá tham khảo, có thể thay đổi theo giỏ căn và chính sách tại từng giai đoạn bán hàng.</p>
+  </div>
+</section>
+
+<!-- ===== CHÍNH SÁCH BÁN HÀNG ===== -->
+<section id="chinh-sach" class="py-32 relative overflow-hidden bg-[#2a1a15]">
+  <div class="absolute inset-0 bg-gradient-to-b from-[#1a0f0c] via-[#3e2723] to-[#1a0f0c] opacity-90"></div>
+  <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-25"></div>
+  <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-gold/15 rounded-full blur-[100px] pointer-events-none animate-pulse-glow"></div>
+  <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#8c5a2b]/25 rounded-full blur-[100px] pointer-events-none animate-pulse-glow" style="animation-delay:2s"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="text-center mb-20 reveal">
+      <div class="inline-flex items-center justify-center gap-3 mb-6 px-6 py-2 rounded-full border border-brand-gold/30 bg-black/20">
+        <span class="font-serif tracking-[0.3em] uppercase text-xs text-brand-goldlight">Vlasta Premier <span class="opacity-70 ml-1 font-sans">By VanPhu</span></span>
+      </div>
+      <h2 class="font-serif text-5xl md:text-7xl text-brand-goldlight font-medium tracking-wide text-gradient-gold drop-shadow-2xl mb-4">
+        CHÍNH SÁCH BÁN HÀNG
+      </h2>
+      <p class="text-brand-gold/70 italic text-lg">Đặc quyền tài chính dành riêng cho chủ nhân tinh hoa</p>
+    </div>
+
+    <!-- Chính sách đặc quyền -->
+    <div class="relative mb-24 reveal">
+      <div class="border border-brand-gold/30 rounded-3xl" style="background:linear-gradient(135deg,rgba(18,28,58,0.97),rgba(10,18,40,0.99))">
+        <!-- Title badge — NO overflow-hidden on parent -->
+        <div class="relative pt-10 px-8 md:px-14 pb-8 md:pb-14">
+          <h3 class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-[#3e2723] to-[#1a0f0c] px-8 py-3 border border-brand-gold/40 text-brand-goldlight font-serif text-xl md:text-2xl uppercase tracking-[0.2em] whitespace-nowrap rounded-full shadow-[0_0_20px_rgba(197,160,89,0.3)]">
+            Chính Sách Đặc Quyền
+          </h3>
+
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center mt-6 relative z-10">
+            <div class="border-r border-brand-gold/20 last:border-0 md:last:border-r-0">
+              <p class="text-white/50 text-xs uppercase tracking-widest mb-3">Ưu đãi TT sớm</p>
+              <div class="text-5xl md:text-6xl font-serif text-white mb-2">11<span class="text-3xl text-brand-gold">%</span></div>
+              <p class="text-brand-gold text-[10px] uppercase tracking-wider">/ GTSP</p>
+            </div>
+            <div class="border-r border-brand-gold/20 last:border-0 md:last:border-r-0">
+              <p class="text-white/50 text-xs uppercase tracking-widest mb-3">Thanh toán chỉ</p>
+              <div class="text-5xl md:text-6xl font-serif text-white mb-2">20<span class="text-3xl text-brand-gold">%</span></div>
+              <p class="text-brand-gold text-[10px] uppercase tracking-wider">Đến khi nhận nhà</p>
+            </div>
+            <div class="border-r border-brand-gold/20 last:border-0 md:last:border-r-0 hidden md:block">
+              <p class="text-white/50 text-xs uppercase tracking-widest mb-3">Hỗ trợ lãi suất</p>
+              <div class="text-5xl md:text-6xl font-serif text-white mb-2">0<span class="text-3xl text-brand-gold">%</span></div>
+              <p class="text-brand-gold text-[10px] uppercase tracking-wider">Tới 24 tháng</p>
+            </div>
+            <div class="hidden md:block">
+              <p class="text-white/50 text-xs uppercase tracking-widest mb-3">TT sớm từng đợt</p>
+              <div class="text-5xl md:text-6xl font-serif text-white mb-2">10<span class="text-3xl text-brand-gold">%</span></div>
+              <p class="text-brand-gold text-[10px] uppercase tracking-wider">/ Năm</p>
+            </div>
+          </div>
+
+          <div class="w-full h-px bg-gradient-to-r from-transparent via-brand-gold/30 to-transparent my-10"></div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white/5 border border-brand-gold/20 rounded-2xl p-6 text-center hover:bg-white/10 transition-colors group">
+              <p class="text-brand-goldlight text-sm uppercase tracking-widest font-bold mb-4">Ưu Đãi Tiên Phong</p>
+              <div class="flex items-center justify-center gap-6 text-white">
+                <div class="text-center"><p class="text-[10px] text-white/50 uppercase mb-1">Chiết khấu</p><div class="text-4xl font-serif">1%</div></div>
+                <div class="w-px h-12 bg-brand-gold/30"></div>
+                <div class="text-center"><p class="text-[10px] text-white/50 uppercase mb-1">Tặng ngay</p><div class="text-xl font-bold text-brand-gold">iPhone 17</div><p class="text-[10px] text-white/40">Trị giá 35Tr</p></div>
+              </div>
+            </div>
+            <div class="bg-white/5 border border-brand-gold/20 rounded-2xl p-6 text-center hover:bg-white/10 transition-colors flex flex-col justify-center">
+              <p class="text-brand-goldlight text-sm uppercase tracking-widest font-bold mb-4">Ưu Đãi Thân Thiết</p>
+              <p class="text-[10px] text-white/50 uppercase mb-1">Chiết khấu thêm</p>
+              <div class="text-4xl font-serif text-white">1%</div>
+            </div>
+            <div class="bg-white/5 border border-brand-gold/20 rounded-2xl p-6 text-center hover:bg-white/10 transition-colors flex flex-col justify-center">
+              <p class="text-brand-goldlight text-sm uppercase tracking-widest font-bold mb-4">Ưu Đãi Đồng Hành</p>
+              <p class="text-[10px] text-white/50 uppercase mb-1">Miễn phí quản lý</p>
+              <div class="text-4xl font-serif text-white">3 <span class="text-xl font-sans font-light">Năm</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phương án thanh toán -->
+    <div class="space-y-8 reveal">
+      <!-- PA2 Khuyên dùng -->
+      <div class="border-l-4 border-brand-gold rounded-2xl p-8 md:p-10 relative overflow-hidden glow-gold transform hover:scale-[1.01] transition-transform duration-300" style="background:rgba(10,18,40,0.95);border:1px solid rgba(197,160,89,0.3);border-left:4px solid #c5a059">
+        <div class="absolute top-0 right-0 bg-brand-gold text-brand-navydark text-xs font-bold px-4 py-2 rounded-bl-xl uppercase tracking-widest">Khuyên Dùng</div>
+        <div class="flex flex-col md:flex-row items-center gap-10">
+          <div class="md:w-1/3 text-center md:text-left">
+            <h4 class="text-white/60 font-serif uppercase tracking-widest text-sm mb-2">Phương Án 02</h4>
+            <h3 class="text-3xl font-serif text-brand-goldlight mb-4">Thanh Toán Sớm</h3>
+            <p class="text-white/70 text-sm font-light leading-relaxed">Thanh toán 95% giá trị HĐMB trong vòng 15 ngày kể từ ngày ký — nhận ưu đãi chiết khấu 11%.</p>
+          </div>
+          <div class="md:w-2/3 flex items-center justify-between w-full relative pt-4 md:pt-0">
+            <div class="absolute top-1/2 left-0 w-full h-px bg-brand-gold/30 -translate-y-1/2 z-0 hidden md:block"></div>
+            <div class="relative z-10 flex flex-col items-center">
+              <div class="text-white/60 text-xs mb-3 hidden md:block">T-7</div>
+              <div class="w-4 h-4 rounded-full bg-brand-gold shadow-[0_0_15px_#c5a059] hidden md:block"></div>
+              <div class="text-white font-bold mt-3">100 Tr</div>
+              <div class="text-brand-gold text-[10px] uppercase mt-1">Cọc</div>
+            </div>
+            <div class="relative z-10 flex flex-col items-center">
+              <div class="text-white/60 text-xs mb-3 hidden md:block">T</div>
+              <div class="w-3 h-3 rounded-full bg-white/50 border-2 border-brand-gold hidden md:block"></div>
+              <div class="text-white font-bold mt-3">10%</div>
+              <div class="text-brand-gold text-[10px] uppercase mt-1">Ký HĐMB</div>
+            </div>
+            <div class="relative z-10 flex flex-col items-center">
+              <div class="text-brand-goldlight font-bold text-sm mb-2 hidden md:block">T+15</div>
+              <div class="w-6 h-6 rounded-full bg-brand-gold shadow-[0_0_20px_#c5a059] ring-4 ring-brand-gold/30 hidden md:flex items-center justify-center"></div>
+              <div class="text-4xl font-serif text-white mt-3">85%</div>
+              <div class="text-brand-goldlight text-xs font-bold uppercase mt-1 px-3 py-1 bg-brand-gold/20 rounded-full border border-brand-gold/30">-11% CK</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- PA1 -->
+        <div class="rounded-2xl p-8 hover:border-brand-gold/50 transition-colors duration-300" style="background:rgba(10,18,40,0.95);border:1px solid rgba(255,255,255,0.10)">
+          <h4 class="text-white/60 font-serif uppercase tracking-widest text-sm mb-2">Phương Án 01</h4>
+          <h3 class="text-2xl font-serif text-white mb-6">Thanh Toán Tiến Độ</h3>
+          <ul class="space-y-4 text-white/70 font-light text-sm">
+            <li class="flex justify-between border-b border-white/10 pb-2"><span>Đặt cọc</span><span class="font-medium text-brand-goldlight">100 Triệu</span></li>
+            <li class="flex justify-between border-b border-white/10 pb-2"><span>Ký HĐMB</span><span class="font-medium text-brand-goldlight">10%</span></li>
+            <li class="flex justify-between border-b border-white/10 pb-2"><span>T+60 đến T+360</span><span class="font-medium text-brand-goldlight">35% (6 đợt)</span></li>
+            <li class="flex justify-between border-b border-white/10 pb-2"><span>Bàn giao (Q4/2027)</span><span class="font-medium text-brand-goldlight">45% + KPBT</span></li>
+            <li class="flex justify-between"><span>GCN Sở hữu</span><span class="font-medium text-brand-goldlight">5%</span></li>
+          </ul>
+        </div>
+
+        <!-- PA3 -->
+        <div class="rounded-2xl p-8 hover:border-brand-gold/50 transition-colors duration-300" style="background:rgba(10,18,40,0.95);border:1px solid rgba(255,255,255,0.10)">
+          <h4 class="text-white/60 font-serif uppercase tracking-widest text-sm mb-2">Phương Án 03</h4>
+          <h3 class="text-2xl font-serif text-white mb-6">Vay Ngân Hàng</h3>
+          <div class="bg-black/50 rounded-xl p-5 mb-6 border border-brand-gold/20 text-center">
+            <p class="text-brand-goldlight text-2xl font-serif mb-1">0% tới 24 tháng</p>
+            <p class="text-white/50 text-xs italic">(Không quá 31/12/2028)</p>
+          </div>
+          <ul class="space-y-3 text-white/70 font-light text-sm mb-6">
+            <li class="flex justify-between border-b border-white/10 pb-2"><span>Khách hàng</span><span class="font-medium text-brand-goldlight">20%</span></li>
+            <li class="flex justify-between"><span>Ngân hàng giải ngân</span><span class="font-medium text-brand-goldlight">65%</span></li>
+          </ul>
+          <p class="text-white/60 text-xs mb-3 uppercase tracking-widest text-center">Ngân hàng đồng hành</p>
+          <div class="flex flex-wrap justify-center gap-2">
+            <div style="background:white;border-radius:6px;padding:4px 10px;display:flex;align-items:center;height:28px">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Vietcombank_logo.svg" alt="Vietcombank" style="height:14px;width:auto" onerror="this.parentElement.innerHTML='<span style=color:#1a1a1a;font-size:10px;font-weight:700>Vietcombank</span>'">
+            </div>
+            <div style="background:white;border-radius:6px;padding:4px 10px;display:flex;align-items:center;height:28px">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/VietinBank_logo.svg" alt="VietinBank" style="height:14px;width:auto" onerror="this.parentElement.innerHTML='<span style=color:#1a1a1a;font-size:10px;font-weight:700>VietinBank</span>'">
+            </div>
+            <div style="background:white;border-radius:6px;padding:4px 10px;display:flex;align-items:center;height:28px">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/MB_Bank_logo.svg" alt="MB Bank" style="height:14px;width:auto" onerror="this.parentElement.innerHTML='<span style=color:#1a1a1a;font-size:10px;font-weight:700>MB Bank</span>'">
+            </div>
+            <div style="background:white;border-radius:6px;padding:4px 10px;display:flex;align-items:center;height:28px">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/ACB_Bank_logo.svg" alt="ACB" style="height:14px;width:auto" onerror="this.parentElement.innerHTML='<span style=color:#1a1a1a;font-size:10px;font-weight:700>ACB</span>'">
+            </div>
+            <div style="background:white;border-radius:6px;padding:4px 10px;display:flex;align-items:center;height:28px">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/VPBank_logo.svg" alt="VPBank" style="height:14px;width:auto" onerror="this.parentElement.innerHTML='<span style=color:#1a1a1a;font-size:10px;font-weight:700>VPBank</span>'">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-20 relative z-10 max-w-4xl mx-auto px-4">
+  <div class="text-center mb-12 reveal">
+    <h2 class="font-serif text-3xl font-bold text-brand-navy mb-4">Câu Hỏi Thường Gặp</h2>
+    <div class="w-16 h-1 bg-brand-gold mx-auto"></div>
+  </div>
+  <div class="space-y-4 reveal">
+    <details class="group glass-panel rounded-xl transition-all duration-300" open>
+      <summary class="flex justify-between items-center font-medium cursor-pointer p-6 text-brand-navy">
+        <span class="font-semibold text-lg">Ai là người phù hợp để sở hữu căn hộ tại đây?</span>
+        <span class="transition-transform duration-300 group-open:rotate-180 text-brand-gold flex-shrink-0 ml-4">
+          <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"/></svg>
+        </span>
+      </summary>
+      <div class="text-gray-600 px-6 pb-6 border-t border-brand-gold/10 leading-relaxed text-sm pt-4">
+        Dự án đặc biệt phù hợp với gia đình trẻ, chuyên gia, quản lý cấp cao làm việc tại Phú Mỹ Hưng, khu Nam hoặc trung tâm TP.HCM. Cũng là lựa chọn lý tưởng cho khách hàng muốn nâng cấp không gian sống, cần tầm nhìn sông nước và một cộng đồng tinh hoa chọn lọc.
+      </div>
+    </details>
+    <details class="group glass-panel rounded-xl transition-all duration-300">
+      <summary class="flex justify-between items-center font-medium cursor-pointer p-6 text-brand-navy">
+        <span class="font-semibold text-lg">Thủ tục giữ chỗ (Booking) như thế nào?</span>
+        <span class="transition-transform duration-300 group-open:rotate-180 text-brand-gold flex-shrink-0 ml-4">
+          <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"/></svg>
+        </span>
+      </summary>
+      <div class="text-gray-600 px-6 pb-6 border-t border-brand-gold/10 leading-relaxed text-sm pt-4">
+        Khách hàng booking giữ chỗ 50 triệu/căn. Khi chuyển cọc thành công, số tiền cọc chính thức là <strong>100 triệu đồng</strong>. Khoản này sẽ được cấn trừ trực tiếp vào đợt thanh toán đầu tiên (Ký Hợp đồng mua bán).
+      </div>
+    </details>
+    <details class="group glass-panel rounded-xl transition-all duration-300">
+      <summary class="flex justify-between items-center font-medium cursor-pointer p-6 text-brand-navy">
+        <span class="font-semibold text-lg">Pháp lý dự án như thế nào?</span>
+        <span class="transition-transform duration-300 group-open:rotate-180 text-brand-gold flex-shrink-0 ml-4">
+          <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"/></svg>
+        </span>
+      </summary>
+      <div class="text-gray-600 px-6 pb-6 border-t border-brand-gold/10 leading-relaxed text-sm pt-4">
+        Vlasta Premier – Phú Thuận là sản phẩm sở hữu lâu dài (không phải sở hữu có thời hạn). Pháp nhân dự án là Công ty Cổ phần Đầu tư Xây dựng New Tech, mã số doanh nghiệp 0313333920. Thông tin pháp lý chi tiết cần đối chiếu theo hồ sơ bán hàng và văn bản công bố chính thức tại thời điểm giao dịch.
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ===== TIN TỨC ===== -->
+<section id="tin-tuc" class="py-24 relative z-10 bg-brand-cream/50 border-y border-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+      <p class="text-brand-gold font-medium tracking-[0.2em] uppercase text-sm mb-4">Cập nhật mới nhất</p>
+      <h2 class="font-serif text-4xl md:text-5xl text-brand-navy mb-6">Tin Tức Dự Án</h2>
+      <p class="text-gray-600 font-light text-lg">Theo dõi những thông tin mới nhất về tiến độ xây dựng, chính sách và sự kiện của Vlasta Premier Phú Thuận.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 reveal">
+      <div class="glass-panel rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+        <div class="h-52 bg-gradient-to-br from-brand-navy to-brand-navydark flex items-center justify-center">
+          <img src="https://vlastapremier.vanphu.vn/phuthuan/backend/uploads/NTR_PV_01_Tongthe_c2b959c8fc.jpg"
+               alt="Tin tức 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+        </div>
+        <div class="p-6">
+          <p class="text-brand-gold text-xs uppercase tracking-widest mb-2">Tiến độ xây dựng</p>
+          <h3 class="font-serif text-xl text-brand-navy mb-3 leading-snug">Cập nhật tiến độ xây dựng Vlasta Premier – Phú Thuận</h3>
+          <p class="text-gray-500 text-sm font-light leading-relaxed">Dự án đang triển khai đúng tiến độ cam kết. Phần tầng hầm và móng đã hoàn thành, khung kết cấu đang được thi công.</p>
+          <a href="#lien-he" class="inline-flex items-center gap-1 text-brand-gold text-sm font-medium mt-4 hover:text-brand-navy transition-colors">
+            Tìm hiểu thêm <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="glass-panel rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+        <div class="h-52 overflow-hidden">
+          <img src="https://vlasta-premier.vn/wp-content/uploads/2026/03/tienich-hoboi.webp"
+               alt="Tin tức 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+        </div>
+        <div class="p-6">
+          <p class="text-brand-gold text-xs uppercase tracking-widest mb-2">Chính sách & Ưu đãi</p>
+          <h3 class="font-serif text-xl text-brand-navy mb-3 leading-snug">Chính sách ưu đãi đặc biệt dành cho khách hàng tiên phong</h3>
+          <p class="text-gray-500 text-sm font-light leading-relaxed">Chiết khấu 11% thanh toán sớm, lãi suất 0% 24 tháng và hàng loạt quà tặng giá trị dành riêng cho những ai quyết định sớm.</p>
+          <a href="#chinh-sach" class="inline-flex items-center gap-1 text-brand-gold text-sm font-medium mt-4 hover:text-brand-navy transition-colors">
+            Xem chính sách <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="glass-panel rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+        <div class="h-52 overflow-hidden">
+          <img src="https://vlastapremier.vanphu.vn/phuthuan/backend/uploads/Frame_1984079359_4ba664023a.png"
+               alt="Tin tức 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+        </div>
+        <div class="p-6">
+          <p class="text-brand-gold text-xs uppercase tracking-widest mb-2">Sự kiện</p>
+          <h3 class="font-serif text-xl text-brand-navy mb-3 leading-snug">Mở bán chính thức Vlasta Premier Phú Thuận tại Nam Sài Gòn</h3>
+          <p class="text-gray-500 text-sm font-light leading-relaxed">Sự kiện ra mắt chính thức thu hút hàng trăm khách hàng tinh hoa, đánh dấu cột mốc mới cho thị trường bất động sản khu Nam.</p>
+          <a href="#lien-he" class="inline-flex items-center gap-1 text-brand-gold text-sm font-medium mt-4 hover:text-brand-navy transition-colors">
+            Tìm hiểu thêm <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LIÊN HỆ ===== -->
+<section id="lien-he" class="py-24 relative z-10 flex justify-center border-t border-brand-gold/10">
+  <div class="glass-panel p-10 md:p-16 rounded-[40px] max-w-4xl w-full mx-4 relative shadow-2xl reveal">
+    <div class="absolute -top-32 -right-32 w-64 h-64 bg-brand-gold/15 rounded-full blur-[80px] pointer-events-none"></div>
+    <div class="absolute -bottom-32 -left-32 w-64 h-64 bg-brand-navy/8 rounded-full blur-[80px] pointer-events-none"></div>
+
+    <div class="relative z-10 text-center mb-10">
+      <p class="text-brand-gold text-sm uppercase tracking-[0.25em] mb-3">Chuyên viên sẵn sàng tư vấn</p>
+      <h2 class="font-serif text-3xl md:text-4xl text-brand-navy mb-4">Nhận Bảng Giá &amp; Giỏ Căn Mới Nhất</h2>
+      <p class="text-gray-500 font-light max-w-xl mx-auto">Để lại thông tin để chuyên viên chuẩn bị giỏ căn đẹp nhất, file thiết kế chi tiết và phương án tài chính may đo cho riêng bạn.</p>
+    </div>
+
+    <form class="max-w-xl mx-auto space-y-5 relative z-10" id="form-dang-ky">
+      <input type="text" class="w-full bg-white/70 border border-white/80 px-6 py-4 rounded-2xl focus:outline-none focus:ring-2 focus:ring-brand-gold/50 text-gray-700 placeholder-gray-400 shadow-sm" placeholder="Họ và tên *">
+      <input type="tel" class="w-full bg-white/70 border border-white/80 px-6 py-4 rounded-2xl focus:outline-none focus:ring-2 focus:ring-brand-gold/50 text-gray-700 placeholder-gray-400 shadow-sm" placeholder="Số điện thoại liên hệ *">
+      <select class="w-full bg-white/70 border border-white/80 px-6 py-4 rounded-2xl focus:outline-none focus:ring-2 focus:ring-brand-gold/50 text-gray-500 shadow-sm appearance-none">
+        <option value="">Sản phẩm quan tâm...</option>
+        <option>Căn hộ 1 Phòng Ngủ (từ 4,35 tỷ)</option>
+        <option>Căn hộ 2 Phòng Ngủ (từ 6,36 tỷ)</option>
+        <option>Căn hộ 3 Phòng Ngủ (từ 8,15 tỷ)</option>
+        <option>Penthouse Duplex</option>
+      </select>
+      <button type="button" class="w-full relative group overflow-hidden rounded-2xl shadow-lg">
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-gold to-[#d4b475] transition-transform duration-300 group-hover:scale-105"></div>
+        <div class="relative px-6 py-4 text-white font-medium tracking-widest uppercase text-sm flex justify-center items-center gap-2">
+          Đăng Ký Tư Vấn Ngay
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </div>
+      </button>
+      <p class="text-[10px] text-gray-400 text-center">Cam kết: Thông tin của quý khách được bảo mật tuyệt đối và chỉ sử dụng cho mục đích tư vấn dự án.</p>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center py-10 text-gray-400 text-sm font-light relative z-10 bg-brand-navydark">
+  <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+    <p>&copy; 2026 Vlasta Premier Phú Thuận. Tuyệt tác từ Văn Phú Invest.</p>
+    <div class="flex gap-6 text-brand-goldlight">
+      <a href="#" class="hover:text-white transition-colors">Facebook</a>
+      <a href="#" class="hover:text-white transition-colors">Youtube</a>
+      <a href="#" class="hover:text-white transition-colors">Zalo</a>
+    </div>
+  </div>
+  <p class="text-[10px] mt-6 opacity-50 max-w-4xl mx-auto px-4">(*) Các hình ảnh, chính sách và thông số trên chỉ mang tính tham khảo, phụ thuộc vào tài liệu chính thức từ Chủ đầu tư và có thể điều chỉnh tùy theo từng giai đoạn bán hàng thực tế mà không cần báo trước.</p>
+</footer>
+
+<script>
+function closeMobile(){document.getElementById('mobile-menu').classList.add('hidden')}
+
+// IntersectionObserver thay thế scroll listener — không reflow
+const revealObs = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add('active');revealObs.unobserve(e.target)}
+  })
+},{threshold:0.07});
+document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
+
+// Navbar scroll — rAF throttle + passive
+const navbar = document.getElementById('navbar');
+const logoImg = document.getElementById('logo-img');
+const navLinks = document.querySelectorAll('.nav-link');
+let rafTick = false;
+
+function updateNavbar(){
+  const scrolled = window.scrollY > 50;
+  if(scrolled){
+    navbar.style.background = 'rgba(255,255,255,0.93)';
+    navbar.style.borderBottomColor = 'rgba(0,0,0,0.07)';
+    navbar.style.boxShadow = '0 2px 24px rgba(0,0,0,0.07)';
+    logoImg.style.filter = 'none';
+    navLinks.forEach(a=>{a.style.color='#374151'});
+    document.getElementById('mobile-toggle').style.color='#1a2b4c';
+  } else {
+    navbar.style.background = 'transparent';
+    navbar.style.borderBottomColor = 'transparent';
+    navbar.style.boxShadow = 'none';
+    logoImg.style.filter = 'brightness(0) invert(1)';
+    navLinks.forEach(a=>{a.style.color='rgba(255,255,255,0.9)'});
+    document.getElementById('mobile-toggle').style.color='white';
+  }
+  rafTick = false;
+}
+
+window.addEventListener('scroll',()=>{
+  if(!rafTick){requestAnimationFrame(updateNavbar);rafTick=true}
+},{passive:true});
+updateNavbar();
+</script>
+</body>
+</html>
