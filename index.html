@@ -500,4 +500,73 @@
                 </select>
                 <button type="button" class="w-full relative group overflow-hidden rounded-2xl shadow-lg">
                     <div class="absolute inset-0 bg-gradient-to-r from-brand-gold to-[#d4b475] group-hover:scale-105 transition-transform duration-500"></div>
-                    <div class="relative px-6 py-4 text-white font-medium tracking-widest uppercase text-sm flex justify-center items-center 
+                    <div class="relative px-6 py-4 text-white font-medium tracking-widest uppercase text-sm flex justify-center items-center gap-2">
+                        Đăng Ký Tư Vấn Ngay
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </div>
+                </button>
+                <p class="text-[10px] text-gray-400 text-center">Cam kết: Thông tin của quý khách được bảo mật tuyệt đối và chỉ sử dụng cho mục đích tư vấn.</p>
+            </form>
+        </div>
+    </section>
+
+    <footer class="text-center py-10 text-gray-400 text-sm font-light relative z-10 bg-brand-navydark">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>&copy; 2026 Vlasta Premier Phú Thuận. Tuyệt tác từ Văn Phú Invest.</p>
+            <div class="flex gap-6 text-brand-goldlight">
+                <a href="#" class="hover:text-white transition-colors">Facebook</a>
+                <a href="#" class="hover:text-white transition-colors">Youtube</a>
+                <a href="#" class="hover:text-white transition-colors">Zalo</a>
+            </div>
+        </div>
+        <p class="text-[10px] mt-6 opacity-50 max-w-4xl mx-auto px-4">(*) Hình ảnh, chính sách và thông số chỉ mang tính tham khảo, có thể điều chỉnh tùy theo từng giai đoạn bán hàng thực tế.</p>
+    </footer>
+
+    <script>
+        function toggleMenu(){document.getElementById('mobile-menu').classList.toggle('open')}
+        function closeMobile(){document.getElementById('mobile-menu').classList.remove('open')}
+
+        function activateVisible(){
+            document.querySelectorAll('.reveal:not(.active)').forEach(function(el){
+                var r=el.getBoundingClientRect();
+                if(r.top < window.innerHeight + 60 && r.bottom > -60){el.classList.add('active');}
+            });
+        }
+        var revealObs = new IntersectionObserver(function(entries){
+            entries.forEach(function(e){
+                if(e.isIntersecting){e.target.classList.add('active');revealObs.unobserve(e.target)}
+            });
+        },{threshold:0,rootMargin:'0px 0px -40px 0px'});
+        document.querySelectorAll('.reveal').forEach(function(el){revealObs.observe(el)});
+        activateVisible();
+        window.addEventListener('scroll',activateVisible,{passive:true});
+        setTimeout(activateVisible,200);
+
+        var rafTick = false;
+        function updateNavbar(){
+            var nb = document.getElementById('navbar');
+            var logo = document.getElementById('logo-text');
+            var links = nb.querySelectorAll('a');
+            if(window.scrollY > 50){
+                nb.style.cssText='background:rgba(255,255,255,0.93);backdrop-filter:blur(16px);border-bottom:1px solid rgba(0,0,0,0.06);box-shadow:0 1px 20px rgba(0,0,0,0.05)';
+                logo.style.color='#1a2b4c';
+                links.forEach(function(l){
+                    if(l.classList.contains('text-brand-goldlight')){l.style.color='#c5a059'}
+                    else{l.style.color='#374151'}
+                });
+            } else {
+                nb.style.cssText='background:transparent;border-bottom:1px solid transparent';
+                logo.style.color='white';
+                links.forEach(function(l){
+                    if(l.classList.contains('text-brand-goldlight')){l.style.color='#e8d3a1'}
+                    else{l.style.color='rgba(255,255,255,0.9)'}
+                });
+            }
+        }
+        window.addEventListener('scroll',function(){
+            if(!rafTick){window.requestAnimationFrame(function(){updateNavbar();rafTick=false});rafTick=true}
+        },{passive:true});
+        updateNavbar();
+    </script>
+</body>
+</html>
